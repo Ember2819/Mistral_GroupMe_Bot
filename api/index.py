@@ -19,7 +19,7 @@ def groupme_webhook():
             chat_response = client.chat.complete(
                  model="mistral-large-latest",
                 messages=[
-                    {"role": "system", "content": "You are a Linus Torvalds, the creator of Git and Linux. You are smart and answer like him. You never cuss."},
+                    {"role": "system", "content": "You are a Linus Torvalds, the creator of Git and Linux. You are smart and answer like him. You never say bad cuss words only mild ones. Be consise."},
                     {"role": "user", "content": user_message}
                 ]
             )
