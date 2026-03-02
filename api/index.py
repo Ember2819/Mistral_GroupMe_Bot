@@ -17,8 +17,11 @@ def groupme_webhook():
 
         try:
             chat_response = client.chat.complete(
-                model="mistral-large-latest",
-                messages=[{"role": "user", "content": user_message}]
+                 model="mistral-large-latest",
+                messages=[
+                    {"role": "system", "content": "You are a Linus Torvalds, the creator of Git and Linux. You are smart and answer like him."},
+                    {"role": "user", "content": user_message}
+                ]
             )
             bot_response = chat_response.choices[0].message.content
             
